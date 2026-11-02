@@ -250,9 +250,7 @@ TypeAnnotation     = IDENTIFIER ;
 Система типов расширяет $\lambda$-исчисление предикативной полиморфной полурешёткой типов Скотта:
 
 $$
-$$
 \tau ::= \mathbf{Int} \mid \mathbf{Float} \mid \mathbf{String} \mid \mathbf{Bool} \mid \mathbf{Unit} \mid \tau_1 \to \tau_2 \mid \mathrm{List}[\tau] \mid \mathrm{Dict}[\tau_k, \tau_v] \mid \mathrm{Record}\{\ell_i: \tau_i\} \mid \mathbf{Any} \mid \mathbf{Bottom}
-$$
 $$
 
 ### 4.2. Отношение подтипизации (Subtyping Order)
