@@ -469,10 +469,10 @@ print(update(data))
 Пусть $`\mathcal{L}_{1.0}`$ — формальный язык спецификации Blyadocode 1.0, а $`\mathcal{L}_{+}`$ — спецификация Blyadocode+. Тогда:
 
 1. $`\mathcal{L}_{1.0} \subset \mathcal{L}_{+}`$.
-2. Для любой замкнутой программы $P \in \mathcal{L}_{1.0}$, её денотационная семантика в $\mathrm{BlyadVM}_+$ тождественно равна семантике на абстрактной ленточной машине:
+2. Для любой замкнутой программы $`P \in \mathcal{L}_{1.0}`$, её денотационная семантика в $`\mathrm{BlyadVM}_+`$ тождественно равна семантике на абстрактной ленточной машине:
 
 $$
-\llbracket P \rrbracket_{\mathrm{BlyadVM}+} \equiv \llbracket P \rrbracket_{\mathrm{VM}_{1.0}}
+[\![ P ]\!]_{\mathrm{BlyadVM}+} \equiv [\![ P ]\!]_{\mathrm{VM}_{1.0}}
 $$
 
 **Доказательство.**
