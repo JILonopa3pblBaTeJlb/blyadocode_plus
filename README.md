@@ -1,6 +1,6 @@
 # СТАНДАРТ И СИСТЕМНАЯ СПЕЦИФИКАЦИЯ ЯЗЫКА ПРОГРАММИРОВАНИЯ BLYADOCODE+ (ВЕРСИЯ 2.0.0-PROPOSAL)
 
-```
+```text
 Идентификатор документа: ISO/IEC JTC1/SC22/BLYAD-PLUS-STD-2026
 Статус: Нормативный проект международного стандарта (International Standard Proposal)
 Дата фиксации: Ноябрь 2026 г.
@@ -21,56 +21,61 @@
 ## 1. АЛГЕБРАИЧЕСКИЙ БАЗИС И МОРФОЛОГИЧЕСКАЯ ТЕОРИЯ
 
 ### 1.1. Пространство семантических ядер ($\mathcal{R}$)
+
 Морфологический базис определяется фактор-кольцом вычетов по модулю 4:
 
-$$\mathcal{R} = \mathbb{Z}/4\mathbb{Z} = \{[0], [1], [2], [3]\}$$
+$$
+\mathcal{R} = \mathbb{Z}/4\mathbb{Z} = \{[0], [1], [2], [3]\}
+$$
 
 Элементы $\mathcal{R}$ взаимно однозначно соответствуют четырём категорным семантическим пространствам:
 
-$$\mathcal{R}_0 = \text{`БЛЯДЬ`} \implies \text{Statica} \quad (\text{Объекты категории } \operatorname{Ob}(\mathbf{C}), \text{ состояние, данные})$$
-
-$$\mathcal{R}_1 = \text{`ХУЙ`} \implies \text{Negatio} \quad (\text{Контравариантные функторы } \mathbf{F}^{\mathrm{op}}, \text{ инверсия, ветвление, инварианты})$$
-
-$$\mathcal{R}_2 = \text{`ПИЗД-`} \implies \text{Spatium} \quad (\text{Монады локализации } \mathbf{T}, \text{ топология памяти, области видимости, коллекции})$$
-
-$$\mathcal{R}_3 = \text{`ЕБАТ-`} \implies \text{Actio} \quad (\text{Морфизмы } \operatorname{Hom}_{\mathbf{C}}(A, B), \text{ вычисления, преобразования, } \beta\text{-редукция})$$
+* **$\mathcal{R}_0$ (`БЛЯДЬ`) $\implies$ Statica:** Объекты категории $\operatorname{Ob}(\mathbf{C})$, состояние, данные.
+* **$\mathcal{R}_1$ (`ХУЙ`) $\implies$ Negatio:** Контравариантные функторы $\mathbf{F}^{\mathrm{op}}$, инверсия, ветвление, инварианты.
+* **$\mathcal{R}_2$ (`ПИЗД-`) $\implies$ Spatium:** Монады локализации $\mathbf{T}$, топология памяти, области видимости, коллекции.
+* **$\mathcal{R}_3$ (`ЕБАТ-`) $\implies$ Actio:** Морфизмы $\operatorname{Hom}_{\mathbf{C}}(A, B)$, вычисления, преобразования, $\beta$-редукция.
 
 ### 1.2. Пространство падежно-синтаксических дериваций ($\mathcal{A}$)
+
 Пространство грамматических модификаторов изоморфно кольцу вычетов по модулю 9:
 
-$$\mathcal{A} = \mathbb{Z}/9\mathbb{Z} = \{0, 1, 2, 3, 4, 5, 6, 7, 8\}$$
+$$
+\mathcal{A} = \mathbb{Z}/9\mathbb{Z} = \{0, 1, 2, 3, 4, 5, 6, 7, 8\}
+$$
 
 Каждому элементу $a \in \mathcal{A}$ сопоставляется актантная роль в терминах реляционной семантики Филлмора:
 
 $$\alpha: \mathcal{A} \to \mathbf{DeepCases}$$
 
-$$\begin{aligned}
-\alpha(0) &= \mathbf{Nom} && \text{Номинатив (базис, объявление сущности)} \\
-\alpha(1) &= \mathbf{Gen} && \text{Генетив (адресация, принадлежность, селектор поля)} \\
-\alpha(2) &= \mathbf{Dat} && \text{Датив (директив, условие перехода, аргумент-приёмник)} \\
-\alpha(3) &= \mathbf{Acc} && \text{Аккузатив (целевой объект, операнд воздействия)} \\
-\alpha(4) &= \mathbf{Ins} && \text{Инструменталис (метод модификации, присваивание, мутация)} \\
-\alpha(5) &= \mathbf{Abl} && \text{Аблатив (граница области, терминатор контекста, выход)} \\
-\alpha(6) &= \mathbf{Loc} && \text{Локатив (контекст исполнения, окружение, фрейм активации)} \\
-\alpha(7) &= \mathbf{Prd} && \text{Предикатив (свойство, сигнатура типа, предикат)} \\
-\alpha(8) &= \mathbf{Ter} && \text{Терминатив (мета-состояние, системный переключатель фаз)}
-\end{aligned}$$
+* $\alpha(0) = \mathbf{Nom}$ — Номинатив (базис, объявление сущности).
+* $\alpha(1) = \mathbf{Gen}$ — Генетив (адресация, принадлежность, селектор поля).
+* $\alpha(2) = \mathbf{Dat}$ — Датив (директив, условие перехода, аргумент-приёмник).
+* $\alpha(3) = \mathbf{Acc}$ — Аккузатив (целевой объект, операнд воздействия).
+* $\alpha(4) = \mathbf{Ins}$ — Инструменталис (метод модификации, присваивание, мутация).
+* $\alpha(5) = \mathbf{Abl}$ — Аблатив (граница области, терминатор контекста, выход).
+* $\alpha(6) = \mathbf{Loc}$ — Локатив (контекст исполнения, окружение, фрейм активации).
+* $\alpha(7) = \mathbf{Prd}$ — Предикатив (свойство, сигнатура типа, предикат).
+* $\alpha(8) = \mathbf{Ter}$ — Терминатив (мета-состояние, системный переключатель фаз).
 
 ### 1.3. Полная каноническая морфологическая матрица $\mathbf{M}_{4 \times 9}$
+
 Лексический словарь языка $\mathbf{\Sigma}_{+}$ строго замкнут:
-$$\mathbf{\Sigma}_{+} = \mathcal{R} \otimes \mathcal{A}, \quad |\mathbf{\Sigma}_{+}| = 36$$
 
-Матрица строковых изоморфизмов $\mathbf{M} \in \mathcal{M}_{4 \times 9}(\text{String})$ фиксирует нормализованное представление языка:
+$$
+\mathbf{\Sigma}_{+} = \mathcal{R} \otimes \mathcal{A}, \quad |\mathbf{\Sigma}_{+}| = 36
+$$
 
-$$\mathbf{M} = \begin{pmatrix}
-\text{блядь} & \text{бляди} & \text{блядью} & \text{блядей} & \text{блядям} & \text{блядями} & \text{блядях} & \text{блядская} & \text{блядство} \\
-\text{хуй} & \text{хуя} & \text{хую} & \text{хуем} & \text{хуе} & \text{хуи} & \text{хуёв} & \text{хуёвый} & \text{хуёвина} \\
-\text{пизда} & \text{пизды} & \text{пизде} & \text{пизду} & \text{пиздой} & \text{пиздец} & \text{пиздеть} & \text{пиздёж} & \text{пиздю} \\
-\text{ебать} & \text{ебати} & \text{ебату} & \text{ебатей} & \text{ебатям} & \text{ебатями} & \text{ебатях} & \text{ебатская} & \text{ебатство}
-\end{pmatrix}$$
+Матрица строковых изоморфизмов фиксирует нормализованное представление языка:
 
-**Инвариант лексического разбора:**
-Любая последовательность символов входного потока $w \notin \mathbf{M}$ и не являющаяся пробельным разделителем или однострочным комментарием (`#`, `//`), вызывает фатальный останов компилятора с кодом `E001: БЛЯДЬ НЕ РАСПОЗНАНА`.
+| Код | 0 (Nom) | 1 (Gen) | 2 (Dat) | 3 (Acc) | 4 (Ins) | 5 (Abl) | 6 (Loc) | 7 (Prd) | 8 (Ter) |
+| :-: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **R0: БЛЯДЬ** | `блядь` | `бляди` | `блядью` | `блядей` | `блядям` | `блядями` | `блядях` | `блядская` | `блядство` |
+| **R1: ХУЙ** | `хуй` | `хуя` | `хую` | `хуем` | `хуе` | `хуи` | `хуёв` | `хуёвый` | `хуёвина` |
+| **R2: ПИЗД-** | `пизда` | `пизды` | `пизде` | `пизду` | `пиздой` | `пиздец` | `пиздеть` | `пиздёж` | `пиздю` |
+| **R3: ЕБАТ-** | `ебать` | `ебати` | `ебату` | `ебатей` | `ебатям` | `ебатями` | `ебатях` | `ебатская` | `ебатство` |
+
+**Инвариант лексического разбора:**  
+Любая последовательность символов входного потока $w \notin \mathbf{M}$, не являющаяся пробельным разделителем или однострочным комментарием (`#`, `//`), вызывает фатальный останов компилятора с кодом `E001: БЛЯДЬ НЕ РАСПОЗНАНА`.
 
 ---
 
@@ -78,25 +83,38 @@ $$\mathbf{M} = \begin{pmatrix}
 
 Для обеспечения дескриптивной мощности $\aleph_0$ без нарушения лексической замкнутости $|\mathbf{\Sigma}_{+}| = 36$, все пользовательские идентификаторы, строковые константы и вещественные числа кодируются в полиномиальном четверичном базисе над алфавитом нулевых форм:
 
-$$\mathcal{B}_4 = \{\mathbf{M}_{0,0}, \mathbf{M}_{1,0}, \mathbf{M}_{2,0}, \mathbf{M}_{3,0}\} = \{\text{`блядь`}, \text{`хуй`}, \text{`пизда`}, \text{`ебать`}\} \leftrightarrow \{0, 1, 2, 3\}$$
+$$
+\mathcal{B}_4 = \{\text{блядь}, \text{хуй}, \text{пизда}, \text{ебать}\} \leftrightarrow \{0, 1, 2, 3\}
+$$
 
 ### 2.1. Изоморфизм квотирования (Quotation Morphism)
-Любой литерал или идентификатор $\mathbf{Payload}$ экранируется оператором локализации скоупа:
-$$\mathbf{Literal}(x) = \mathbf{M}_{2,4} \circ \mathbf{Payload}(x) \circ \mathbf{M}_{2,5} \equiv \text{`пиздой`} \circ \mathbf{Payload}(x) \circ \text{`пиздец`}$$
+
+Любой литерал или идентификатор экранируется оператором локализации скоупа:
+
+$$
+\mathbf{Literal}(x) = \text{пиздой} \circ \mathbf{Payload}(x) \circ \text{пиздец}
+$$
 
 ### 2.2. Кодирование числовых множеств ($\mathbb{Z}$ и $\mathbb{R}$)
+
 * **Неотрицательное целое число $N \in \mathbb{N}_0$** кодируется разложением по степеням 4:
   $$N = \sum_{k=0}^{m} d_k \cdot 4^k, \quad d_k \in \mathcal{B}_4$$
-* **Отрицательные числа:** Префиксируются унарным инвертором $\mathbf{M}_{1,0}$ (`хуй`).
-* **Вещественные числа $\mathbb{R}$:** Мантисса и порядок разделяются токеном $\mathbf{M}_{0,1}$ (`бляди`).
+* **Отрицательные числа:** Префиксируются унарным инвертором `хуй`.
+* **Вещественные числа $\mathbb{R}$:** Мантисса и порядок разделяются токеном `бляди`.
 
 ### 2.3. Кодирование идентификаторов и Unicode-строк
+
 Строка $\mathcal{S} = (c_0, c_1, \dots, c_{n-1})$ рассматривается как последовательность октетов UTF-8. Каждый байт $B \in [0, 255]$ однозначно представляется кортежем из четырёх цифр в четверичной системе:
 
-$$B = \sum_{j=0}^{3} d_j \cdot 4^{3-j}, \quad d_j \in \{0, 1, 2, 3\}, \quad 4^4 - 1 = 255$$
+$$
+B = \sum_{j=0}^{3} d_j \cdot 4^{3-j}, \quad d_j \in \{0, 1, 2, 3\}, \quad 4^4 - 1 = 255
+$$
 
-Биекция абсолютно плотна: в отличие от троичной системы версии 1.0, четверичное разложение покрывает в точности диапазон $0..255$ без дефектных состояний:
-$$|\mathcal{B}_4^4| = 256 \equiv |\mathbb{Z}/256\mathbb{Z}|$$
+Биекция абсолютно плотна: четверичное разложение покрывает в точности диапазон $0..255$ без дефектных состояний:
+
+$$
+|\mathcal{B}_4^4| = 256 \equiv |\mathbb{Z}/256\mathbb{Z}|
+$$
 
 ---
 
@@ -228,25 +246,38 @@ TypeAnnotation     = IDENTIFIER ;
 ## 4. СИСТЕМА СТАТИЧЕСКОЙ ТИПИЗАЦИИ $\lambda_{Blyad}^+$
 
 ### 4.1. Грамматика типов
+
 Система типов расширяет $\lambda$-исчисление предикативной полиморфной полурешёткой типов Скотта:
 
-$$\tau ::= \mathbf{Int} \mid \mathbf{Float} \mid \mathbf{String} \mid \mathbf{Bool} \mid \mathbf{Unit} \mid \tau_1 \to \tau_2 \mid \operatorname{List}[\tau] \mid \operatorname{Dict}[\tau_k, \tau_v] \mid \operatorname{Record}\{\ell_i: \tau_i\} \mid \mathbf{Any} \mid \mathbf{Bottom}$$
+$$
+\tau ::= \mathbf{Int} \mid \mathbf{Float} \mid \mathbf{String} \mid \mathbf{Bool} \mid \mathbf{Unit} \mid \tau_1 \to \tau_2 \mid \operatorname{List}[\tau] \mid \operatorname{Dict}[\tau_k, \tau_v] \mid \operatorname{Record}\{\ell_i: \tau_i\} \mid \mathbf{Any} \mid \mathbf{Bottom}
+$$
 
 ### 4.2. Отношение подтипизации (Subtyping Order)
-Отношение $\le:$ является квазипорядком, удовлетворяющим следующим структурным правилам:
 
-$$\frac{}{\tau \le: \mathbf{Any}} \quad \frac{}{\mathbf{Bottom} \le: \tau} \quad \frac{\tau_1 \le: \tau_2 \quad \tau_2 \le: \tau_3}{\tau_1 \le: \tau_3} \quad (\text{Транзитивность})$$
+Отношение $\le$ является квазипорядком над типами:
 
-$$\frac{\sigma_2 \le: \sigma_1 \quad \tau_1 \le: \tau_2}{\sigma_1 \to \tau_1 \le: \sigma_2 \to \tau_2} \quad (\text{Контравариантность стрелочного типа})$$
-
-$$\frac{\forall \ell_i \in R_2, \quad \exists \ell_i \in R_1: \tau_i^{(1)} \le: \tau_i^{(2)}}{\operatorname{Record}\{\ell_i: \tau_i^{(1)}\} \le: \operatorname{Record}\{\ell_i: \tau_i^{(2)}\}} \quad (\text{Широкая глубинная подтипизация записей})$$
+```text
+               τ ≤ Any                    Bottom ≤ τ
+               
+          σ2 ≤ σ1      τ1 ≤ τ2
+        ────────────────────────── (Контравариантность аргумента)
+          (σ1 → τ1) ≤ (σ2 → τ2)
+          
+        ∀ l_i ∈ R2,  ∃ l_i ∈ R1:  τ_i(1) ≤ τ_i(2)
+        ───────────────────────────────────────── (Глубинная подтипизация записей)
+          Record{l_i: τ_i(1)} ≤ Record{l_i: τ_i(2)}
+```
 
 ---
 
 ## 5. СТРУКТУРНАЯ ОПЕРАЦИОННАЯ СЕМАНТИКА (SOS)
 
 Состояние рантайма формализуется тройкой конфигурации:
-$$\mathcal{C} = \langle e, \rho, \sigma \rangle$$
+
+$$
+\mathcal{C} = \langle e, \rho, \sigma \rangle
+$$
 
 где:
 * $e \in \mathbf{AST}$ — текущий редуцируемый терм;
@@ -254,30 +285,53 @@ $$\mathcal{C} = \langle e, \rho, \sigma \rangle$$
 * $\sigma \in \mathbf{Store} = \mathbf{Loc} \to \mathbf{Val}$ — распределённое ассоциативное хранилище мутабельных значений.
 
 Отношение стрелочной редукции (Big-Step Evaluation) обозначается:
-$$\langle e, \rho, \sigma \rangle \Downarrow \langle v, \sigma' \rangle$$
+
+$$
+\langle e, \rho, \sigma \rangle \Downarrow \langle v, \sigma' \rangle
+$$
 
 ### 5.1. Редукция переменной (Variable Lookup)
-$$\frac{x \in \operatorname{dom}(\rho) \quad \rho(x) = \ell \quad \ell \in \operatorname{dom}(\sigma) \quad \sigma(\ell) = v}{\langle x, \rho, \sigma \rangle \Downarrow \langle v, \sigma \rangle}$$
+
+```text
+x ∈ dom(ρ)    ρ(x) = ℓ    ℓ ∈ dom(σ)    σ(ℓ) = v
+────────────────────────────────────────────────
+         ⟨x, ρ, σ⟩ ⇓ ⟨v, σ⟩
+```
 
 ### 5.2. Связывание и присваивание (Variable Mutation)
-Оператор `блядям` ($\mathbf{M}_{0,4}$):
 
-$$\frac{\langle e, \rho, \sigma \rangle \Downarrow \langle v, \sigma_1 \rangle \quad x \in \operatorname{dom}(\rho) \quad \rho(x) = \ell}{\langle \operatorname{Assign}(x, e), \rho, \sigma \rangle \Downarrow \langle v, \sigma_1[\ell \mapsto v] \rangle}$$
+Оператор `блядям`:
+
+```text
+⟨e, ρ, σ⟩ ⇓ ⟨v, σ1⟩    x ∈ dom(ρ)    ρ(x) = ℓ
+──────────────────────────────────────────────
+      ⟨Assign(x, e), ρ, σ⟩ ⇓ ⟨v, σ1[ℓ ↦ v]⟩
+```
 
 ### 5.3. Аппликация функционального замыкания ($\beta$-редукция)
-Оператор вызова `ебати` ($\mathbf{M}_{3,1}$):
 
-$$\frac{\begin{aligned}
-\langle f, \rho, \sigma \rangle &\Downarrow \langle \mathbf{Closure}(x, e_{\text{body}}, \rho_{\text{lex}}), \sigma_1 \rangle \\
-\langle arg, \rho, \sigma_1 \rangle &\Downarrow \langle v_a, \sigma_2 \rangle \\
-\ell_{\text{fresh}} \notin \operatorname{dom}(\sigma_2) \quad \rho' &= \rho_{\text{lex}}[x \mapsto \ell_{\text{fresh}}] \quad \sigma_3 = \sigma_2[\ell_{\text{fresh}} \mapsto v_a] \\
-\langle e_{\text{body}}, \rho', \sigma_3 \rangle &\Downarrow \langle v_{\text{res}}, \sigma_4 \rangle
-\end{aligned}}{\langle \operatorname{Call}(f, arg), \rho, \sigma \rangle \Downarrow \langle v_{\text{res}}, \sigma_4 \rangle}$$
+Оператор вызова `ебати`:
+
+```text
+⟨f, ρ, σ⟩ ⇓ ⟨Closure(x, e_body, ρ_lex), σ1⟩
+⟨arg, ρ, σ1⟩ ⇓ ⟨v_a, σ2⟩
+ℓ_fresh ∉ dom(σ2)
+ρ' = ρ_lex[x ↦ ℓ_fresh]
+σ3 = σ2[ℓ_fresh ↦ v_a]
+⟨e_body, ρ', σ3⟩ ⇓ ⟨v_res, σ4⟩
+─────────────────────────────────────────────
+         ⟨Call(f, arg), ρ, σ⟩ ⇓ ⟨v_res, σ4⟩
+```
 
 ### 5.4. Редукция словарного морфизма
+
 Создание ассоциативного отображения $\mathcal{D}: K \to V$:
 
-$$\frac{\forall i \in \{1..n\}: \langle k_i, \rho, \sigma_{2i-2} \rangle \Downarrow \langle v_i^k, \sigma_{2i-1} \rangle \quad \langle e_i, \rho, \sigma_{2i-1} \rangle \Downarrow \langle v_i^v, \sigma_{2i} \rangle}{\langle \operatorname{DictLiteral}(\{(k_i, e_i)\}_{i=1}^n), \rho, \sigma_0 \rangle \Downarrow \langle \mathbf{DictObject}(\{v_i^k \mapsto v_i^v\}_{i=1}^n), \sigma_{2n} \rangle}$$
+```text
+∀ i ∈ {1..n}: ⟨k_i, ρ, σ_(2i-2)⟩ ⇓ ⟨v_i^k, σ_(2i-1)⟩  и  ⟨e_i, ρ, σ_(2i-1)⟩ ⇓ ⟨v_i^v, σ_(2i)⟩
+─────────────────────────────────────────────────────────────────────────────────────────────
+            ⟨DictLiteral({(k_i, e_i)}), ρ, σ_0⟩ ⇓ ⟨DictObject({v_i^k ↦ v_i^v}), σ_(2n)⟩
+```
 
 ---
 
@@ -285,9 +339,11 @@ $$\frac{\forall i \in \{1..n\}: \langle k_i, \rho, \sigma_{2i-2} \rangle \Downar
 
 Виртуальная машина $\text{BlyadVM}_+$ построена на двухстековой сегментированной модели с динамическим кучевым распределением:
 
-$$\mathfrak{M}_+ = \langle \mathcal{K}, \mathcal{S}_{\text{op}}, \mathcal{H}, \mathcal{F}_{\text{curr}}, \mathbf{PC} \rangle$$
+$$
+\mathfrak{M}_+ = \langle \mathcal{K}, \mathcal{S}_{\text{op}}, \mathcal{H}, \mathcal{F}_{\text{curr}}, \mathbf{PC} \rangle
+$$
 
-```
+```text
    ┌────────────────────────────────────────────────────────┐
    │                  BlyadVM+ Environment                 │
    │                                                        │
@@ -310,13 +366,13 @@ $$\mathfrak{M}_+ = \langle \mathcal{K}, \mathcal{S}_{\text{op}}, \mathcal{H}, \m
 ```
 
 ### 6.1. Стек вызовов ($\mathcal{K}$) и фреймы окружения
+
 Каждый фрейм активации $\mathcal{E} \in \mathcal{K}$ содержит:
 1. `LocalSlots`: Массив локальных регистров переменных $\mathbf{Loc} \to \mathbf{Val}$.
 2. `LexicalParent`: Указатель на замыкающий фрейм родительского лексического скоупа $\mathcal{E}_{\text{parent}}$.
 3. `ReturnPC`: Адрес возврата в байткод-сегменте программы.
 
 ### 6.2. Система команд промежуточного представления ($\text{Blyad-IR}$)
-Транслятор генерирует стековый промежуточный код фиксированной разрядности:
 
 | Опкод | Мнемоника | Действие над стеком $\mathcal{S}_{\text{op}}$ | Описание |
 | :--- | :--- | :--- | :--- |
@@ -345,7 +401,7 @@ $$\mathfrak{M}_+ = \langle \mathcal{K}, \mathcal{S}_{\text{op}}, \mathcal{H}, \m
 | **E007** | `МОРФОЛОГИЧЕСКИЙ ПИЗДЕЦ` | Неразрешимая коллизия деривационного разбора в контекстном фильтре. |
 | **E008** | `ГРАММАТИЧЕСКАЯ ХУЙНЯ` | Неустранимый конфликт сдвига/свёртки в таблице $\mathbf{LALR(1)}$. |
 | **E009** | `СЕМАНТИЧЕСКИЙ ПИЗДЕЦ` | Попытка мутации неизменяемой ссылки (Immutable L-value mutation). |
-| **E010** | `ХУЙНЯ С ТИПАМИ` | Отказ унификации типов: $\tau_{\text{actual}} \not\le: \tau_{\text{expected}}$. |
+| **E010** | `ХУЙНЯ С ТИПАМИ` | Отказ унификации типов: $\tau_{\text{actual}} \not\le \tau_{\text{expected}}$. |
 | **E011** | `БЛЯДСКАЯ ОБЛАСТЬ ВИДИМОСТИ` | Разрешение неинициализированного идентификатора: $\text{Id} \notin \operatorname{dom}(\rho)$. |
 | **E012** | `ЕБАНУТЫЙ ВЫЗОВ` | Нарушение арности вызова или попытка аппликации невызываемого типа. |
 | **E013** | `ПИЗДЕЦ ПАМЯТИ` | Отказ аллокатора кучи при сборке мусора (Heap Exhaustion). |
@@ -359,6 +415,7 @@ $$\mathfrak{M}_+ = \langle \mathcal{K}, \mathcal{S}_{\text{op}}, \mathcal{H}, \m
 Задача: Создать словарь, инкапсулирующий структуру объекта, объявить функцию инкрементации числового поля и применить её.
 
 ### 8.1. Семантический эквивалент (High-Level Pseudo-Code)
+
 ```python
 def update(entity):
     entity["val"] = entity["val"] + 1
@@ -369,14 +426,6 @@ print(update(data))
 ```
 
 ### 8.2. Канонический листинг на БЛЯДОКОД+ (Strict Morphology)
-
-*Идентификаторы закодированы в блоках `пиздой ... пиздец`:*
-* `update` $\to \mathbf{ID}_{\text{fn}}$: `пиздой хуй хуй блядь ебать пиздец`
-* `entity` $\to \mathbf{ID}_{\text{arg}}$: `пиздой хуй пизда блядь ебать пиздец`
-* `data` $\to \mathbf{ID}_{\text{dict}}$: `пиздой хуй ебать блядь блядь пиздец`
-* Ключ `"val"` $\to \mathbf{ID}_{\text{key}}$: `пиздой ебать блядь хуй хуй пиздец`
-* Число `42` $\to 2 \cdot 16 + 2 \cdot 4 + 2 \cdot 1 \implies 222_4$: `пиздой пизда пизда пизда пиздец`
-* Число `1` $\to 1_4$: `пиздой хуй пиздец`
 
 ```text
 // ===========================================================================
@@ -423,6 +472,9 @@ print(update(data))
 
 *Доказательство.*  
 Лексикон $\mathbf{\Sigma}_{1.0}$ состоит ровно из 8 операторов ядра и 3 служебных токенов данных, порождённых индексами подмножества:
-$$\mathcal{R}_{1.0} = \{0, 1, 2\} \subset \mathbb{Z}/4\mathbb{Z}, \quad \mathcal{A}_{1.0} \subset \mathbb{Z}/9\mathbb{Z}$$
+
+$$
+\mathcal{R}_{1.0} = \{0, 1, 2\} \subset \mathbb{Z}/4\mathbb{Z}, \quad \mathcal{A}_{1.0} \subset \mathbb{Z}/9\mathbb{Z}
+$$
 
 При инициализации транслятора в режиме обратной совместимости (`Legacy Guard Flag`), грамматический парсер переводит конечный автомат в режим прямой линейной трансляции опкодов на байтовой ленте $\mathbb{Z} \to \mathbb{Z}/256\mathbb{Z}$. Поскольку ядро $\mathcal{R}_3 = \text{`ЕБАТ-`}$ не пересекается с лексиконом 1.0, множество редукционных соотношений расширенной системы $\lambda_{Blyad}^+$ образует консервативное расширение исходной формальной теории. $\blacksquare$
