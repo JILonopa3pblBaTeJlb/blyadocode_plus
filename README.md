@@ -30,10 +30,10 @@ $$
 
 Элементы $\mathcal{R}$ взаимно однозначно соответствуют четырём категорным семантическим пространствам:
 
-* **$\mathcal{R}_0$ (`БЛЯДЬ`) $\implies$ Statica:** Объекты категории $\operatorname{Ob}(\mathbf{C})$, состояние, данные.
+* **$\mathcal{R}_0$ (`БЛЯДЬ`) $\implies$ Statica:** Объекты категории $\mathrm{Ob}(\mathbf{C})$, состояние, данные.
 * **$\mathcal{R}_1$ (`ХУЙ`) $\implies$ Negatio:** Контравариантные функторы $\mathbf{F}^{\mathrm{op}}$, инверсия, ветвление, инварианты.
 * **$\mathcal{R}_2$ (`ПИЗД-`) $\implies$ Spatium:** Монады локализации $\mathbf{T}$, топология памяти, области видимости, коллекции.
-* **$\mathcal{R}_3$ (`ЕБАТ-`) $\implies$ Actio:** Морфизмы $\operatorname{Hom}_{\mathbf{C}}(A, B)$, вычисления, преобразования, $\beta$-редукция.
+* **$\mathcal{R}_3$ (`ЕБАТ-`) $\implies$ Actio:** Морфизмы $\mathrm{Hom}_{\mathbf{C}}(A, B)$, вычисления, преобразования, $\beta$-редукция.
 
 ### 1.2. Пространство падежно-синтаксических дериваций ($\mathcal{A}$)
 
@@ -250,7 +250,9 @@ TypeAnnotation     = IDENTIFIER ;
 Система типов расширяет $\lambda$-исчисление предикативной полиморфной полурешёткой типов Скотта:
 
 $$
-\tau ::= \mathbf{Int} \mid \mathbf{Float} \mid \mathbf{String} \mid \mathbf{Bool} \mid \mathbf{Unit} \mid \tau_1 \to \tau_2 \mid \operatorname{List}[\tau] \mid \operatorname{Dict}[\tau_k, \tau_v] \mid \operatorname{Record}\{\ell_i: \tau_i\} \mid \mathbf{Any} \mid \mathbf{Bottom}
+$$
+\tau ::= \mathbf{Int} \mid \mathbf{Float} \mid \mathbf{String} \mid \mathbf{Bool} \mid \mathbf{Unit} \mid \tau_1 \to \tau_2 \mid \mathrm{List}[\tau] \mid \mathrm{Dict}[\tau_k, \tau_v] \mid \mathrm{Record}\{\ell_i: \tau_i\} \mid \mathbf{Any} \mid \mathbf{Bottom}
+$$
 $$
 
 ### 4.2. Отношение подтипизации (Subtyping Order)
@@ -402,7 +404,7 @@ $$
 | **E008** | `ГРАММАТИЧЕСКАЯ ХУЙНЯ` | Неустранимый конфликт сдвига/свёртки в таблице $\mathbf{LALR(1)}$. |
 | **E009** | `СЕМАНТИЧЕСКИЙ ПИЗДЕЦ` | Попытка мутации неизменяемой ссылки (Immutable L-value mutation). |
 | **E010** | `ХУЙНЯ С ТИПАМИ` | Отказ унификации типов: $\tau_{\text{actual}} \not\le \tau_{\text{expected}}$. |
-| **E011** | `БЛЯДСКАЯ ОБЛАСТЬ ВИДИМОСТИ` | Разрешение неинициализированного идентификатора: $\text{Id} \notin \operatorname{dom}(\rho)$. |
+| **E011** | `БЛЯДСКАЯ ОБЛАСТЬ ВИДИМОСТИ` | Разрешение неинициализированного идентификатора: $\mathrm{Id} \notin \mathrm{dom}(\rho)$. |
 | **E012** | `ЕБАНУТЫЙ ВЫЗОВ` | Нарушение арности вызова или попытка аппликации невызываемого типа. |
 | **E013** | `ПИЗДЕЦ ПАМЯТИ` | Отказ аллокатора кучи при сборке мусора (Heap Exhaustion). |
 | **E014** | `ХУЙНЯ С МОДУЛЯМИ` | Циклическая зависимость графа импортов или сбой линковщика. |
