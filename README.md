@@ -347,7 +347,7 @@ $$
 
 ```text
    ┌────────────────────────────────────────────────────────┐
-   │                  BlyadVM+ Environment                 │
+   │                  BlyadVM+ Environment                  │
    │                                                        │
    │  ┌───────────────────┐        ┌─────────────────────┐  │
    │  │   Call Stack (K)  │        │   Operand Stack (S) │  │
